@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="center">
+
+<div class="card">
+<h2>Campus Crowd Monitor</h2>
+
+<form id="loginForm">
+
+<input placeholder="Name" id="name" required>
+
+<input placeholder="Phone (10 digit)" id="phone" required>
+
+<select id="dept" required>
+<option value="">Select Department</option>
+<option value="CE">CE</option>
+<option value="CT">CT</option>
+<option value="EL">EL</option>
+<option value="ME">ME</option>
+<option value="EEE">EEE</option>
+</select>
+
+<!-- 🔽 ROLE DROPDOWN -->
+<select id="role" onchange="showStaffCode()" required>
+<option value="">Select Role</option>
+<option value="student">Student</option>
+<option value="staff">Staff</option>
+</select>
+
+<!-- Staff code appears only for staff -->
+<div id="staffBox" style="display:none">
+<input placeholder="Enter Staff Code" id="staff_code">
+</div>
+
+<button>Login</button>
+</form>
+</div>
+
+<script src="/static/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visitor Logs</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2>Visitor Logs</h2>
+<div class="filter-bar">
+    <select id="roleFilter" onchange="loadLogs()">
+        <option value="all">All Users</option>
+        <option value="student">Students Only</option>
+        <option value="staff">Staff Only</option>
+    </select>
+</div>
+<table border="1">
+    <thead>
+<tr>
+    <th>Name</th>
+<th>Dept</th>
+<th>Role</th>
+<th>Area</th>
+<th>Entry Time</th>
+<th>Exit Time</th>
+</tr>
+</thead>
+
+
+
+
+    <tbody id="logTableBody">
+    </tbody>
+</table>
+<div class="log-controls">
+    <input type="date" id="dateFilter">
+    <button onclick="loadLogs()">Filter</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+</div>
+<script src="/static/logs.js"></script>
+
+</body>
+</html>
